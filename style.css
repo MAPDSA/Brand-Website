@@ -639,3 +639,39 @@ html.splashing{overflow:hidden}
 .pcard{padding:clamp(22px,2.2vw,30px)!important;border-radius:22px}
 .pcard>p:empty{display:none}
 .pstats{gap:0;margin:0}.pstats div{padding-block:10px}.pstats dt{font-size:clamp(24px,2.2vw,30px);min-width:4.6em}
+/* language switch */
+.nav .lang{display:inline-flex;align-items:center;padding:3px;border:1px solid var(--line);border-radius:999px;background:#fff;gap:2px;flex:none}
+.nav .lang a{display:inline-flex;align-items:center;justify-content:center;min-width:36px;height:30px;padding:0 10px;border-radius:999px;font-size:13px;font-weight:600;color:var(--mute,#5B6273);text-decoration:none;line-height:1}
+.nav .lang a[lang="hi"]{font-family:"Noto Sans Devanagari",var(--font,Geist),sans-serif;font-size:14px}
+.nav .lang a[aria-current]{background:var(--blue);color:#fff}
+.nav .lang a:not([aria-current]):hover{background:#F1F4FE;color:var(--ink)}
+@media(max-width:860px){.nav .btns{gap:10px}.nav .lang{display:inline-flex!important}.nav .lang a{min-width:32px;height:28px;padding:0 8px}}
+/* Hindi typography */
+html[lang="hi"] body{font-family:Geist,"Noto Sans Devanagari",system-ui,sans-serif}
+html[lang="hi"] :is(h1,h2,h3){letter-spacing:0!important;line-height:1.28}
+html[lang="hi"] h1{font-size:clamp(34px,5.2vw,64px)}
+html[lang="hi"] .eyebrow,html[lang="hi"] .pnum,html[lang="hi"] .mchip,html[lang="hi"] .pchip{letter-spacing:.02em}
+html[lang="hi"] p,html[lang="hi"] li,html[lang="hi"] td{line-height:1.7}
+.nav .btns{flex-wrap:nowrap;align-items:center}
+html[lang="hi"]{--mono:"Noto Sans Devanagari","Geist Mono",ui-monospace,monospace}
+html[lang="hi"] .eyebrow,html[lang="hi"] .statcard span,html[lang="hi"] .pnum,html[lang="hi"] .pchip,html[lang="hi"] .mchip{font-family:"Noto Sans Devanagari",Geist,sans-serif;text-transform:none}
+@media(max-width:380px){.nav .lang a{min-width:28px;padding:0 6px;font-size:12px}.nav .menu{min-width:auto}}
+/* v24 nav fit for 861–1240px, both languages */
+.nav .wrap>a:first-child{flex:none}
+.nav .btn,.nav ul>li>a{white-space:nowrap}
+@media(min-width:861px) and (max-width:1240px){
+ .nav .wrap{gap:14px}
+ .nav ul{gap:clamp(10px,1.5vw,22px);font-size:14.5px}
+ .nav .btns{gap:8px}
+ .nav .btns>.btn-s{display:none}
+ .nav .wrap>a:first-child img{width:168px;height:auto}
+ .nav .btns .btn-p{padding-inline:16px}
+}
+@media(min-width:861px) and (max-width:980px){
+ .nav ul{gap:10px;font-size:14px}
+ .nav .wrap>a:first-child img{width:150px}
+ .nav .lang a{min-width:30px;padding:0 7px}
+}
+html[lang="hi"] body *{letter-spacing:0!important}
+html[lang="hi"] .mchip,html[lang="hi"] .abar-tag,html[lang="hi"] #splash .skip{font-family:"Noto Sans Devanagari",Geist,sans-serif;text-transform:none}
+@media(max-width:860px){.nav .wrap{gap:10px}.nav .wrap>a:first-child{flex:0 1 auto;min-width:0}.nav .wrap>a:first-child img{width:clamp(128px,44vw,184px);height:auto}.nav .btns{flex:none}}

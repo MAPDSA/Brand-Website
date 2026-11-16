@@ -1,3 +1,4 @@
+var HI=document.documentElement.lang==='hi';
 (function(){
 var d=document,R=matchMedia('(prefers-reduced-motion: reduce)').matches;
 d.documentElement.classList.add('js');
@@ -20,11 +21,11 @@ if(!R&&'IntersectionObserver' in window){var co=new IntersectionObserver(functio
 (function(){var f=document.getElementById('leadForm');if(!f)return;var msg=document.getElementById('formMsg');
 f.addEventListener('submit',function(e){e.preventDefault();var bad=[].filter.call(f.querySelectorAll('[required]'),function(x){return !x.value.trim()||(x.type=='email'&&!/^\S+@\S+\.\S+$/.test(x.value))});
 [].forEach.call(f.querySelectorAll('[required]'),function(x){x.classList.toggle('err',bad.indexOf(x)>-1)});
-if(bad.length){msg.textContent='Please fill in the highlighted fields.';msg.className='fnote bad';bad[0].focus();return}
+if(bad.length){msg.textContent=(HI?'हाइलाइट किए गए फ़ील्ड भरें।':'Please fill in the highlighted fields.');msg.className='fnote bad';bad[0].focus();return}
 var ep=f.getAttribute('data-endpoint'),btn=f.querySelector('button');
 if(!ep){msg.textContent='Online form isn’t connected yet. Please email info@sapienceautomata.com or call +91 81006 75937.';msg.className='fnote bad';return}
-btn.disabled=true;btn.textContent='Sending…';
-var data={};new FormData(f).forEach(function(v,k){data[k]=v});fetch(ep,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).then(function(r){if(!r.ok)throw 0;f.reset();msg.textContent=f.dataset.ok||'Thanks! Our sales team will get back to you within one working day.';msg.className='fnote ok'}).catch(function(){msg.textContent='Couldn’t send. Please email info@sapienceautomata.com or call +91 81006 75937.';msg.className='fnote bad'}).then(function(){btn.disabled=false;btn.textContent=f.dataset.btn||'Contact sales →'})});})();
+btn.disabled=true;btn.textContent=(HI?'भेज रहे हैं…':'Sending…');
+var data={};new FormData(f).forEach(function(v,k){data[k]=v});fetch(ep,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).then(function(r){if(!r.ok)throw 0;f.reset();msg.textContent=f.dataset.ok||(HI?'धन्यवाद! हमारी सेल्स टीम एक कामकाजी दिन में आपसे संपर्क करेगी।':'Thanks! Our sales team will get back to you within one working day.');msg.className='fnote ok'}).catch(function(){msg.textContent=(HI?'भेजा नहीं जा सका। कृपया info@sapienceautomata.com पर ईमेल करें या +91 81006 75937 पर कॉल करें।':'Couldn’t send. Please email info@sapienceautomata.com or call +91 81006 75937.');msg.className='fnote bad'}).then(function(){btn.disabled=false;btn.textContent=f.dataset.btn||(HI?'सेल्स से बात करें →':'Contact sales →')})});})();
 /* page transitions + start at top */
 (function(){
  if('scrollRestoration' in history)history.scrollRestoration='manual';
@@ -40,7 +41,7 @@ var data={};new FormData(f).forEach(function(v,k){data[k]=v});fetch(ep,{method:'
  var ID='9kMJqMemYnM',m,body,last;
  var preview=/claudeusercontent|claude\.ai/.test(location.hostname)||location.protocol==='file:';
  function build(){m=document.createElement('div');m.className='vmodal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');m.setAttribute('aria-label','Blinksmart demo video');
-  m.innerHTML='<div class="vm-back" data-close></div><div class="vm-box"><button class="vm-x" type="button" data-close aria-label="Close video">✕</button><div class="vm-body"></div><p class="vm-foot"><a href="https://youtu.be/'+ID+'" target="_blank" rel="noopener">Watch on YouTube ↗</a></p></div>';
+  m.innerHTML='<div class="vm-back" data-close></div><div class="vm-box"><button class="vm-x" type="button" data-close aria-label="Close video">✕</button><div class="vm-body"></div><p class="vm-foot"><a href="https://youtu.be/'+ID+'" target="_blank" rel="noopener">'+(HI?'YouTube पर देखें ↗':'Watch on YouTube ↗')+'</a></p></div>';
   document.body.appendChild(m);body=m.querySelector('.vm-body');
   m.addEventListener('click',function(e){if(e.target.closest('[data-close]'))close()});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))close()})}
@@ -54,10 +55,12 @@ var data={};new FormData(f).forEach(function(v,k){data[k]=v});fetch(ep,{method:'
 /* mobile menu: accordion, scroll lock, close label */
 (function(){var b=document.getElementById('menuBtn'),m=document.getElementById('menu');if(!b||!m)return;
  var mq=matchMedia('(max-width:860px)');
- [].forEach.call(m.querySelectorAll('li.dd'),function(li){var a=li.querySelector(':scope>a');var t=document.createElement('button');t.type='button';t.className='ddt';t.setAttribute('aria-expanded','false');t.setAttribute('aria-label','Show '+a.textContent.trim()+' pages');t.innerHTML='<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg>';a.after(t);
+ [].forEach.call(m.querySelectorAll('li.dd'),function(li){var a=li.querySelector(':scope>a');var t=document.createElement('button');t.type='button';t.className='ddt';t.setAttribute('aria-expanded','false');t.setAttribute('aria-label',HI?a.textContent.trim()+' के पेज दिखाएँ':'Show '+a.textContent.trim()+' pages');t.innerHTML='<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg>';a.after(t);
   if(a.classList.contains('on')){li.classList.add('open');t.setAttribute('aria-expanded','true')}
   t.addEventListener('click',function(){var o=li.classList.toggle('open');t.setAttribute('aria-expanded',String(o))})});
- function sync(){var o=m.classList.contains('open')&&mq.matches;document.documentElement.classList.toggle('menu-open',o);b.textContent=o?'Close':'Menu'}
+ function place(){var n=b.closest('header');if(n)m.style.setProperty('top',Math.max(0,Math.round(n.getBoundingClientRect().bottom))+'px','important')}
+ function sync(){var o=m.classList.contains('open')&&mq.matches;if(o)place();else m.style.removeProperty('top');document.documentElement.classList.toggle('menu-open',o);b.textContent=o?(HI?'बंद करें':'Close'):(HI?'मेन्यू':'Menu')}
+ addEventListener('resize',function(){if(m.classList.contains('open'))place()});
  b.addEventListener('click',function(){setTimeout(sync,0)});
  m.addEventListener('click',function(e){var a=e.target.closest('a');if(a&&mq.matches){m.classList.remove('open');b.setAttribute('aria-expanded','false');sync()}});
  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open')){m.classList.remove('open');b.setAttribute('aria-expanded','false');sync();b.focus()}});
@@ -75,21 +78,21 @@ f.dataset.ok='Thanks! The Sapience Safety Report 2026 is on its way to your inbo
  function dl(){var a=document.createElement('a');a.href=PDF;a.download='Sapience-Safety-Report-2026.pdf';document.body.appendChild(a);a.click();a.remove()}
  function build(){m=document.createElement('div');m.className='vmodal rmodal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');m.setAttribute('aria-labelledby','rmT');
   m.innerHTML='<div class="vm-back" data-close></div><div class="rm-box"><button class="vm-x" type="button" data-close aria-label="Close">✕</button>'+
-  '<span class="eyebrow">Free report · PDF</span><h3 id="rmT">Sapience Safety Report 2026</h3><p class="rm-sub">The DDAWS mandate: what it means for fleets, schools and OEMs, and what to do before the deadlines.</p>'+
-  '<form class="form rm-form" novalidate><label>Work email<input type="email" name="email" required autocomplete="email" placeholder="you@company.com"></label>'+
-  '<label><span>Name <span class="rm-opt">(optional)</span></span><input name="name" autocomplete="name"></label>'+
-  '<button class="btn btn-p" type="submit">Download the report ↓</button><p class="rm-msg" role="status"></p>'+
-  '<p class="rm-fine">We’ll also send you occasional road-safety updates. No spam.</p></form></div>';
+  (HI?'<span class="eyebrow">मुफ़्त रिपोर्ट · PDF</span><h3 id="rmT">Sapience Safety Report 2026</h3><p class="rm-sub">DDAWS नियम: फ़्लीट, स्कूल और OEM के लिए इसका मतलब, और डेडलाइन से पहले क्या करें।</p>':'<span class="eyebrow">Free report · PDF</span><h3 id="rmT">Sapience Safety Report 2026</h3><p class="rm-sub">The DDAWS mandate: what it means for fleets, schools and OEMs, and what to do before the deadlines.</p>')+
+  '<form class="form rm-form" novalidate><label>'+(HI?'ऑफ़िस ईमेल':'Work email')+'<input type="email" name="email" required autocomplete="email" placeholder="you@company.com"></label>'+
+  '<label><span>'+(HI?'नाम <span class="rm-opt">(वैकल्पिक)</span>':'Name <span class="rm-opt">(optional)</span>')+'</span><input name="name" autocomplete="name"></label>'+
+  '<button class="btn btn-p" type="submit">'+(HI?'रिपोर्ट डाउनलोड करें ↓':'Download the report ↓')+'</button><p class="rm-msg" role="status"></p>'+
+  '<p class="rm-fine">'+(HI?'हम आपको कभी-कभी सड़क सुरक्षा अपडेट भी भेजेंगे। कोई स्पैम नहीं।':'We’ll also send you occasional road-safety updates. No spam.')+'</p></form></div>';
   document.body.appendChild(m);
   m.addEventListener('click',function(e){if(e.target.closest('[data-close]'))close()});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))close()});
   var f=m.querySelector('form'),msg=m.querySelector('.rm-msg'),btn=f.querySelector('button');
   f.addEventListener('submit',function(e){e.preventDefault();var em=f.email.value.trim();
-   if(!/^\S+@\S+\.\S+$/.test(em)){f.email.classList.add('err');msg.textContent='Please enter a valid email.';msg.className='rm-msg bad';f.email.focus();return}
-   f.email.classList.remove('err');btn.disabled=true;btn.textContent='Preparing…';
+   if(!/^\S+@\S+\.\S+$/.test(em)){f.email.classList.add('err');msg.textContent=(HI?'कृपया सही ईमेल डालें।':'Please enter a valid email.');msg.className='rm-msg bad';f.email.focus();return}
+   f.email.classList.remove('err');btn.disabled=true;btn.textContent=(HI?'तैयार हो रहा है…':'Preparing…');
    fetch(EP,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:em,name:f.name.value.trim(),interest:'Safety Report 2026 download',page:location.pathname})})
    .catch(function(){}).then(function(){try{localStorage.setItem('sa-report','1')}catch(x){}
-     msg.innerHTML='Thanks! Your download has started. <a href="'+PDF+'" download target="_blank" rel="noopener">Didn’t start? Click here.</a>';msg.className='rm-msg ok';btn.textContent='Downloaded ✓';dl()})});
+     msg.innerHTML=(HI?'धन्यवाद! डाउनलोड शुरू हो गया है। ':'Thanks! Your download has started. ')+'<a href="'+PDF+'" download target="_blank" rel="noopener">'+(HI?'शुरू नहीं हुआ? यहाँ क्लिक करें।':'Didn’t start? Click here.')+'</a>';msg.className='rm-msg ok';btn.textContent=(HI?'डाउनलोड हो गया ✓':'Downloaded ✓');dl()})});
  }
  function open(){if(!m)build();m.classList.add('open');document.documentElement.classList.add('vm-lock');setTimeout(function(){m.querySelector('input').focus()},50)}
  function close(){m.classList.remove('open');document.documentElement.classList.remove('vm-lock')}
