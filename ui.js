@@ -69,3 +69,30 @@ var m=f.querySelector('textarea[name=message]');if(m&&!m.value)m.value='Please s
 var h=document.createElement('p');h.className='fnote ok';h.style.marginBottom='8px';h.textContent='Fill in your details and we’ll email you the free Sapience Safety Report 2026.';f.insertBefore(h,f.firstChild);
 var b=f.querySelector('button');if(b)b.textContent='Get the report →';
 f.dataset.ok='Thanks! The Sapience Safety Report 2026 is on its way to your inbox.';f.dataset.btn='Get the report →';})();
+/* report download: collect email first */
+(function(){
+ var EP='https://submit-form.com/dsu9fGOOg',PDF='Sapience-Safety-Report-2026.pdf',m;
+ function dl(){var a=document.createElement('a');a.href=PDF;a.download='Sapience-Safety-Report-2026.pdf';document.body.appendChild(a);a.click();a.remove()}
+ function build(){m=document.createElement('div');m.className='vmodal rmodal';m.setAttribute('role','dialog');m.setAttribute('aria-modal','true');m.setAttribute('aria-labelledby','rmT');
+  m.innerHTML='<div class="vm-back" data-close></div><div class="rm-box"><button class="vm-x" type="button" data-close aria-label="Close">✕</button>'+
+  '<span class="eyebrow">Free report · PDF</span><h3 id="rmT">Sapience Safety Report 2026</h3><p class="rm-sub">The DDAWS mandate: what it means for fleets, schools and OEMs, and what to do before the deadlines.</p>'+
+  '<form class="form rm-form" novalidate><label>Work email<input type="email" name="email" required autocomplete="email" placeholder="you@company.com"></label>'+
+  '<label><span>Name <span class="rm-opt">(optional)</span></span><input name="name" autocomplete="name"></label>'+
+  '<button class="btn btn-p" type="submit">Download the report ↓</button><p class="rm-msg" role="status"></p>'+
+  '<p class="rm-fine">We’ll also send you occasional road-safety updates. No spam.</p></form></div>';
+  document.body.appendChild(m);
+  m.addEventListener('click',function(e){if(e.target.closest('[data-close]'))close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))close()});
+  var f=m.querySelector('form'),msg=m.querySelector('.rm-msg'),btn=f.querySelector('button');
+  f.addEventListener('submit',function(e){e.preventDefault();var em=f.email.value.trim();
+   if(!/^\S+@\S+\.\S+$/.test(em)){f.email.classList.add('err');msg.textContent='Please enter a valid email.';msg.className='rm-msg bad';f.email.focus();return}
+   f.email.classList.remove('err');btn.disabled=true;btn.textContent='Preparing…';
+   fetch(EP,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({email:em,name:f.name.value.trim(),interest:'Safety Report 2026 download',page:location.pathname})})
+   .catch(function(){}).then(function(){try{localStorage.setItem('sa-report','1')}catch(x){}
+     msg.innerHTML='Thanks! Your download has started. <a href="'+PDF+'" download target="_blank" rel="noopener">Didn’t start? Click here.</a>';msg.className='rm-msg ok';btn.textContent='Downloaded ✓';dl()})});
+ }
+ function open(){if(!m)build();m.classList.add('open');document.documentElement.classList.add('vm-lock');setTimeout(function(){m.querySelector('input').focus()},50)}
+ function close(){m.classList.remove('open');document.documentElement.classList.remove('vm-lock')}
+ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href$="Sapience-Safety-Report-2026.pdf"]');if(!a||a.closest('.rmodal'))return;
+  var seen=false;try{seen=!!localStorage.getItem('sa-report')}catch(x){}if(seen)return;e.preventDefault();open()});
+})();
