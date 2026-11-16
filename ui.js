@@ -24,7 +24,7 @@ if(bad.length){msg.textContent='Please fill in the highlighted fields.';msg.clas
 var ep=f.getAttribute('data-endpoint'),btn=f.querySelector('button');
 if(!ep){msg.textContent='Online form isn’t connected yet. Please email info@sapienceautomata.com or call +91 81006 75937.';msg.className='fnote bad';return}
 btn.disabled=true;btn.textContent='Sending…';
-var data={};new FormData(f).forEach(function(v,k){data[k]=v});fetch(ep,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).then(function(r){if(!r.ok)throw 0;f.reset();msg.textContent='Thanks! Our sales team will get back to you within one working day.';msg.className='fnote ok'}).catch(function(){msg.textContent='Couldn’t send. Please email info@sapienceautomata.com or call +91 81006 75937.';msg.className='fnote bad'}).then(function(){btn.disabled=false;btn.textContent='Contact sales →'})});})();
+var data={};new FormData(f).forEach(function(v,k){data[k]=v});fetch(ep,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).then(function(r){if(!r.ok)throw 0;f.reset();msg.textContent=f.dataset.ok||'Thanks! Our sales team will get back to you within one working day.';msg.className='fnote ok'}).catch(function(){msg.textContent='Couldn’t send. Please email info@sapienceautomata.com or call +91 81006 75937.';msg.className='fnote bad'}).then(function(){btn.disabled=false;btn.textContent=f.dataset.btn||'Contact sales →'})});})();
 /* page transitions + start at top */
 (function(){
  if('scrollRestoration' in history)history.scrollRestoration='manual';
@@ -63,3 +63,9 @@ var data={};new FormData(f).forEach(function(v,k){data[k]=v});fetch(ep,{method:'
  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open')){m.classList.remove('open');b.setAttribute('aria-expanded','false');sync();b.focus()}});
  mq.addEventListener&&mq.addEventListener('change',sync);
 })();
+(function(){var f=document.getElementById('leadForm');if(!f||!/[?&]report=/.test(location.search))return;
+var s=f.querySelector('select[name=interest]');if(s){var o=document.createElement('option');o.textContent='Free Sapience Safety Report 2026';s.insertBefore(o,s.options[1]||null);s.value=o.textContent;}
+var m=f.querySelector('textarea[name=message]');if(m&&!m.value)m.value='Please send me the free Sapience Safety Report 2026.';
+var h=document.createElement('p');h.className='fnote ok';h.style.marginBottom='8px';h.textContent='Fill in your details and we’ll email you the free Sapience Safety Report 2026.';f.insertBefore(h,f.firstChild);
+var b=f.querySelector('button');if(b)b.textContent='Get the report →';
+f.dataset.ok='Thanks! The Sapience Safety Report 2026 is on its way to your inbox.';f.dataset.btn='Get the report →';})();

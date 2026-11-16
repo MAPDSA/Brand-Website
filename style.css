@@ -542,3 +542,12 @@ main>section+section>.wrap::before,main>section+section:not(.statwrap):not(.cred
 #splash.out{opacity:0;visibility:hidden}
 .nosplash #splash{display:none}
 html.splashing{overflow:hidden}
+.abar{background:var(--blue);color:#fff;font-size:14px;line-height:1.4;position:relative;z-index:21}
+.abar .wrap{display:flex;align-items:center;justify-content:center;gap:12px;min-height:44px;padding-block:8px;position:relative}
+.abar a{color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;text-align:center}
+.abar a:hover b{text-decoration:underline}
+.abar-tag{font:500 11px/1 'Geist Mono',monospace;letter-spacing:.1em;text-transform:uppercase;background:#fff;color:var(--blue);padding:5px 8px;border-radius:999px}
+.abar b{font-weight:600}
+.abar-x{position:absolute;right:max(12px,env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%);background:none;border:0;color:#fff;opacity:.8;font-size:22px;line-height:1;cursor:pointer;width:36px;height:36px}
+.abar-x:hover{opacity:1}
+@media(max-width:720px){.abar{font-size:13px}.abar .wrap{padding-right:44px;justify-content:flex-start}.abar a{justify-content:flex-start;text-align:left;gap:8px}}
