@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blinksmart™ APS 2.0 | AI Driver Drowsiness Warning (DDAWS)</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Blinksmart™ watches the driver and beeps the instant drowsiness or distraction sets in. Alert accuracy above 95%, built for the DDAWS mandate.">
+<link rel="canonical" href="https://www.sapienceautomata.com/blinksmart.html">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#ffffff">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sapience Automata">
+<meta property="og:url" content="https://www.sapienceautomata.com/blinksmart.html">
+<meta property="og:title" content="Blinksmart™ APS 2.0 | AI Driver Drowsiness Warning (DDAWS)">
+<meta property="og:description" content="Blinksmart™ watches the driver and beeps the instant drowsiness or distraction sets in. Alert accuracy above 95%, built for the DDAWS mandate.">
+<meta property="og:image" content="https://www.sapienceautomata.com/og-image.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blinksmart™ APS 2.0 | AI Driver Drowsiness Warning (DDAWS)">
+<meta name="twitter:description" content="Blinksmart™ watches the driver and beeps the instant drowsiness or distraction sets in. Alert accuracy above 95%, built for the DDAWS mandate.">
+<meta name="twitter:image" content="https://www.sapienceautomata.com/og-image.jpg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="sapience-logo.png" as="image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Product", "name": "Blinksmart APS 2.0", "brand": {"@type": "Brand", "name": "Blinksmart"}, "manufacturer": {"@id": "https://www.sapienceautomata.com/#org"}, "category": "Driver Drowsiness and Attention Warning System (DDAWS)", "image": "https://www.sapienceautomata.com/pack.webp", "description": "Blinksmart™ watches the driver and beeps the instant drowsiness or distraction sets in. Alert accuracy above 95%, built for the DDAWS mandate."}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css?v=473b9db0">
+
+</head>
+<body>
+<div id="splash" aria-hidden="true"><video src="logo-anim.mp4" poster="logo-poster.jpg" muted playsinline preload="auto"></video><span class="skip">Tap to skip</span></div>
+<script>(function(){var s=document.getElementById('splash');if(!s)return;var d=document.documentElement;try{var nv=performance.getEntriesByType('navigation')[0],ty=nv?nv.type:'navigate',r=document.referrer;if(ty!=='reload'&&r&&new URL(r).origin===location.origin){s.remove();return}}catch(e){}d.classList.add('splashing');var v=s.querySelector('video'),done=false;
+function end(){if(done)return;done=true;s.classList.add('out');d.classList.remove('splashing');setTimeout(function(){s.remove()},600)}
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){setTimeout(end,900);return}
+v.playbackRate=1.5;var p=v.play();if(p&&p.catch)p.catch(function(){setTimeout(end,1200)});
+v.addEventListener('ended',end);v.addEventListener('error',function(){setTimeout(end,1500)});s.addEventListener('click',end);setTimeout(end,4200)})();</script>
+<div class="abar" id="abar"><div class="wrap"><a href="Sapience-Safety-Report-2026.pdf" download target="_blank" rel="noopener"><span class="abar-tag">Free</span><span class="abar-t abar-long">Sapience Safety Report 2026: the DDAWS mandate and your fleet. <b>Download the PDF&nbsp;↓</b></span><span class="abar-t abar-short">Safety Report 2026 <b>Download&nbsp;↓</b></span></a><button type="button" class="abar-x" aria-label="Close announcement">×</button></div></div>
+<script>try{if(sessionStorage.getItem('sa-abar'))document.getElementById('abar').remove()}catch(e){}(function(){var b=document.getElementById('abar');if(!b)return;b.querySelector('.abar-x').addEventListener('click',function(){b.remove();try{sessionStorage.setItem('sa-abar','1')}catch(e){}})})();</script>
+<header class="nav"><div class="wrap">
+<a href="./" aria-label="Sapience Automata home"><img src="sapience-logo.png" alt="Sapience Automata™ Crafting Greatness" width="200" height="34"></a>
+<nav aria-label="Main"><ul id="menu"><li class="dd"><a href="products.html" class="on">Products<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></a><div class="ddp"><a href="blinksmart.html" class=on><b>Blinksmart™</b><span>Driver drowsiness &amp; distraction (DMS + DFMS)</span></a><a href="copilot-ai.html"><b>CoPilot AI™ Super-Modular ADAS</b><span>Every ADAS module on one edge device</span></a><a href="bike-adas.html"><b>Bike ADAS</b><span>Rider safety for two-wheelers</span></a><a href="products.html#buy"><b>How you buy it</b><span>Hardware, APIs, subscriptions, data</span></a></div></li><li class="dd"><a href="solutions.html">Solutions<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></a><div class="ddp"><a href="public-transport.html"><b>Public transport &amp; school</b><span>Buses, state transport, school fleets</span></a><a href="logistics.html"><b>Logistics &amp; fleet</b><span>Trucks, cabs and staff transport</span></a><a href="oem.html"><b>OEM integration</b><span>Factory-fit DMS and ADAS</span></a><a href="defense.html"><b>Defence &amp; special vehicles</b><span>Convoys and mission vehicles</span></a></div></li><li class="dd"><a href="technology.html">Technology<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></a><div class="ddp"><a href="technology.html#platform"><b>Platform &amp; hardware</b><span>Edge NPU, cameras, connectivity</span></a><a href="technology.html#ai"><b>CoPilot AI™ vision &amp; ML</b><span>On-device computer vision</span></a><a href="technology.html#compliance"><b>Compliance &amp; standards</b><span>CMVR 2025 DDAWS</span></a></div></li><li class="dd"><a href="about.html">Company<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3"/></svg></a><div class="ddp"><a href="about.html"><b>About us</b><span>Our story and founder</span></a><a href="about.html#team"><b>Team &amp; advisors</b><span>Leadership and advisory board</span></a><a href="research.html"><b>Research &amp; innovation</b><span>Patents and R&amp;D</span></a><a href="news.html"><b>News &amp; media</b><span>Announcements</span></a><a href="careers.html"><b>Careers</b><span>Join the team</span></a></div></li><li><a href="contact.html">Contact</a></li><li class="mcta"><a class="btn btn-p" href="contact.html#form">Contact sales</a><a class="btn btn-s" href="https://youtu.be/9kMJqMemYnM" target="_blank" rel="noopener">▶ Watch demo</a><a class="btn btn-s" href="https://copilotai.click/" target="_blank" rel="noopener">Log in to CoPilot AI™</a></li></ul></nav>
+<div class="btns"><a class="btn btn-s" href="https://copilotai.click/" target="_blank" rel="noopener">Log in</a><a class="btn btn-p" href="contact.html#form">Contact sales</a><button class="menu" id="menuBtn" aria-controls="menu" aria-expanded="false">Menu</button></div>
+</div></header>
+<main>
+
+<section class="hero"><div class="wrap">
+<div class="txt"><span class="chip">APS 2.0 · AI driver drowsiness &amp; attention warning</span>
+<h1>Blinksmart™. The co-pilot that <span class="blue">never blinks.</span></h1>
+<p class="lead">A compact AI camera that reads the driver’s eyes and face, beeps the instant they turn drowsy or distracted, and logs every alert to CoPilot&nbsp;AI™.</p>
+<div class="btns"><a class="btn btn-p" href="https://youtu.be/9kMJqMemYnM" target="_blank" rel="noopener">▶ Watch&nbsp;demo</a></div></div>
+<div class="pic"><img src="pack.webp" alt="Blinksmart APS 2.0 retail pack" width="900" height="975" fetchpriority="high" style="max-width:460px;margin-inline:auto"></div>
+</div></section>
+<section class="statwrap"><div class="wrap"><div class="statcard row">
+<div><b>1000+</b><span>Blinksmart™ devices installed</span></div>
+<div><b>3 Cr+</b><span>km with zero fatal&nbsp;accidents</span></div>
+<div><b>15,000+</b><span>passengers kept safe&nbsp;daily</span></div>
+<div><b>95%+</b><span>alert accuracy</span></div></div></div></section>
+<section><div class="wrap stack" style="gap:40px">
+<div class="stack"><span class="eyebrow">Every angle</span><h2>Small device. <span class="blue">Big job.</span></h2></div>
+<div class="gallery">
+<figure><img src="device-front.webp" alt="Blinksmart front: AI camera and illuminator" loading="lazy" width="1100" height="1100"><figcaption>Front: AI camera on the&nbsp;driver</figcaption></figure>
+<figure><img src="device-side.webp" alt="Blinksmart side view with speaker and mount" loading="lazy" width="1000" height="1000"><figcaption>Side: built-in speaker, adjustable&nbsp;mount</figcaption></figure>
+<figure><img src="device-back.webp" alt="Blinksmart back view" loading="lazy" width="1000" height="1000"><figcaption>Back: part of the CoPilot AI™&nbsp;ecosystem</figcaption></figure>
+</div></div></section>
+<section><div class="wrap stack" style="gap:40px">
+<div class="stack"><span class="eyebrow">Key highlights</span><h2>Accurate enough to trust. <span class="blue">Quiet enough to keep&nbsp;on.</span></h2></div>
+<div class="row"><div class="card b"><p class="big" style="color:#fff">&gt;95%</p><p>accuracy for critical&nbsp;alerts*</p></div><div class="card"><p class="big">~0%</p><p>false or unwanted&nbsp;alerts</p></div><div class="card"><p class="big">1</p><p>compact unit, non-intrusive and&nbsp;driver-centric</p></div><div class="card"><p class="big">2</p><p>grades: OEM factory-fit and&nbsp;aftermarket</p></div></div>
+<p style="font-size:14px;color:var(--mute)">*May vary in extreme conditions. Patent 575297 granted; AI crash-prevention ADAS patent (202441075380) under expedited&nbsp;examination.</p>
+</div></section><section class="soft"><div class="wrap stack" style="gap:48px">
+<div class="stack center"><span class="eyebrow">Features</span><h2>Six ways it keeps drivers <span class="blue">safe.</span></h2></div>
+<div class="row"><div class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>AI camera</h3><p>Reads the driver’s eyes and face in real&nbsp;time.</p></div><div class="card b"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></div><h3>Instant beep</h3><p>Wakes the driver right in the&nbsp;cab.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12c2.5 3 5.5 4.5 9 4.5s6.5-1.5 9-4.5"/><path d="M6 15.5l-1.5 2M10 16.5l-.5 2.5M14 16.5l.5 2.5M18 15.5l1.5 2"/></svg></div><h3>Drowsiness</h3><p>Eyes closing, head drop and&nbsp;yawning.</p></div></div>
+<div class="row"><div class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18"/><path d="M10.6 5.6A9.7 9.7 0 0 1 12 5.5c6.5 0 10 6.5 10 6.5a17 17 0 0 1-3.2 4M6.6 6.6A17 17 0 0 0 2 12s3.5 6.5 10 6.5a9.6 9.6 0 0 0 5.4-1.6"/></svg></div><h3>Distraction</h3><p>Looking away, face not visible,&nbsp;overspeeding.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V10M10 19V5M16 19v-7M22 19H2"/></svg></div><h3>Live dashboard</h3><p>Every alert reaches the owner on CoPilot&nbsp;AI™.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div><h3>Live location</h3><p>Track every vehicle, every&nbsp;trip.</p></div></div>
+</div></section>
+<section><div class="wrap split">
+<div class="pic"><img src="device-cable.webp" alt="Blinksmart APS 2.0 on its mount with cable" width="1100" height="1100" loading="lazy"></div>
+<div class="stack"><span class="eyebrow">At a&nbsp;glance</span><h2>Blinksmart™ <span class="blue">APS 2.0</span></h2>
+<table><tr><td>Product type</td><td>AI Driver Drowsiness &amp; Attention Warning System&nbsp;(DDAWS)</td></tr><tr><td>Detects</td><td>Eyes closing, head drop, yawning, looking away, face not visible,&nbsp;overspeeding</td></tr><tr><td>Alerts</td><td>Instant beep in the cab, plus live alert on CoPilot&nbsp;AI™</td></tr><tr><td>Alert accuracy</td><td>Above 95%</td></tr><tr><td>Mounting</td><td>Dashboard or&nbsp;A-pillar</td></tr><tr><td>Fleet software</td><td>CoPilot AI™ web dashboard and Android&nbsp;app</td></tr><tr><td>Made by</td><td>Sapience Automata™,&nbsp;Bengaluru</td></tr></table></div>
+</div></section>
+<section><div class="wrap stack" style="gap:48px">
+<div class="stack"><span class="eyebrow">What it&nbsp;catches</span><h2>It sees what a tired driver <span class="blue">can’t.</span></h2></div>
+<div class="row"><div class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12c2.5 3 5.5 4.5 9 4.5s6.5-1.5 9-4.5"/><path d="M6 15.5l-1.5 2M10 16.5l-.5 2.5M14 16.5l.5 2.5M18 15.5l1.5 2"/></svg></div><h3>Anti-sleep alarm</h3><p>Eyes closing and head dropping, caught in an&nbsp;instant.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div><h3>Fatigue detection</h3><p>Yawning and long-shift tiredness, flagged&nbsp;early.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18"/><path d="M10.6 5.6A9.7 9.7 0 0 1 12 5.5c6.5 0 10 6.5 10 6.5a17 17 0 0 1-3.2 4M6.6 6.6A17 17 0 0 0 2 12s3.5 6.5 10 6.5a9.6 9.6 0 0 0 5.4-1.6"/></svg></div><h3>Distracted driving</h3><p>Eyes off the road or on the&nbsp;phone.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 17a9 9 0 1 1 17 0"/><path d="M12 13l4.5-4.5"/><circle cx="12" cy="13" r="1.2"/></svg></div><h3>Overspeed &amp; rash&nbsp;driving</h3><p>Speeding and harsh driving, alerted&nbsp;live.</p></div></div>
+<div class="row"><div class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M9 15h6"/></svg></div><h3>No face /&nbsp;seizure</h3><p>Alerts when the driver’s face is not&nbsp;visible.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 18M9 3h6M4 21h16"/></svg></div><h3>Smoking &amp; seatbelt</h3><p>Unsafe habits in the cab, logged for&nbsp;coaching.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div><h3>Unauthorised access</h3><p>Facial recognition knows who is&nbsp;driving.</p></div><div class="card"><div class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16.5v.5"/></svg></div><h3>SOS</h3><p>Help, one press&nbsp;away.</p></div></div>
+</div></section><section><div class="wrap"><div class="cta"><div><span class="eyebrow eb-w">Get in&nbsp;touch</span><h2>Put Blinksmart™ in your&nbsp;fleet.</h2><p class="lead" style="color:#DCE6FF">Tell us about your vehicles and routes. We’ll show you Blinksmart™&nbsp;live.</p><div class="btns"><a class="btn btn-w" href="contact.html#form">Contact sales</a><a class="btn btn-g" href="https://youtu.be/9kMJqMemYnM" target="_blank" rel="noopener">Watch demo</a></div></div><dl class="cta-dl"><div><dt>Email</dt><dd>info@sapienceautomata.com</dd></div><div><dt>Phone</dt><dd>+91 81006&nbsp;75937</dd></div><div><dt>Office</dt><dd>Indiranagar, Bengaluru</dd></div></dl></div></div></section>
+
+</main>
+<footer><div class="wrap">
+<div class="col" style="max-width:340px"><img src="sapience-logo.png" alt="Sapience Automata™"><p class="muted">Transforming road safety with AI. Makers of Blinksmart™ and CoPilot&nbsp;AI™.</p></div>
+<div class="col"><b>Products</b><a href="blinksmart.html">Blinksmart™</a><a href="copilot-ai.html">Super-Modular ADAS</a><a href="bike-adas.html">Bike ADAS</a><a href="https://copilotai.click/" target="_blank" rel="noopener">CoPilot AI™ login&nbsp;↗</a><a href="products.html#buy">How you buy&nbsp;it</a></div>
+<div class="col"><b>Solutions</b><a href="public-transport.html">Public transport</a><a href="logistics.html">Logistics &amp; fleet</a><a href="oem.html">OEM integration</a><a href="defense.html">Defence</a></div>
+<div class="col"><b>Company</b><a href="about.html">About us</a><a href="technology.html">Technology</a><a href="research.html">Research</a><a href="news.html">News</a><a href="careers.html">Careers</a><a href="https://www.sapienceautomata.com/privacy-policy" target="_blank" rel="noopener">Privacy policy</a></div>
+<div class="col"><b>Get in&nbsp;touch</b><a href="mailto:info@sapienceautomata.com">info@sapienceautomata.com</a><a href="tel:+918100675937">+91 81006&nbsp;75937</a><span class="muted">Indiranagar, Bengaluru</span>
+<div class="btns" style="gap:16px;margin-top:6px"><a href="https://www.linkedin.com/company/sapienceautomata/" target="_blank" rel="noopener">LinkedIn</a><a href="https://www.instagram.com/sapience_automata/" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@SapienceAutomata" target="_blank" rel="noopener">YouTube</a></div></div>
+</div><div class="wrap"><p class="copy">© 2026 Quivive Automata Private Limited (Sapience Automata™). Blinksmart™, CoPilot AI™ and Sapience Automata™ are trademarks of Quivive Automata Private&nbsp;Limited.</p></div></footer>
+<script src="ui.js?v=473b9db0" defer></script>
+<script>(function(){var b=document.getElementById('menuBtn'),m=document.getElementById('menu');if(b&&m)b.addEventListener('click',function(){m.classList.toggle('open');b.setAttribute('aria-expanded',m.classList.contains('open'))});var v=document.getElementById('heroVid'),sb=document.getElementById('sndBtn');if(v&&sb)sb.addEventListener('click',function(){v.muted=!v.muted;if(!v.muted){v.currentTime=0;v.play()}sb.textContent=v.muted?'Sound on':'Sound off';sb.setAttribute('aria-pressed',String(!v.muted))});})();</script>
+</body>
+</html>
