@@ -45,7 +45,7 @@ var data={};new FormData(f).forEach(function(v,k){data[k]=v});fetch(ep,{method:'
   m.addEventListener('click',function(e){if(e.target.closest('[data-close]'))close()});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('open'))close()})}
  function open(){if(!m)build();last=document.activeElement;
-  body.innerHTML=preview?'<video src="assets/feature.mp4" controls autoplay playsinline></video>':'<iframe src="https://www.youtube-nocookie.com/embed/'+ID+'?autoplay=1&rel=0&modestbranding=1" title="Blinksmart demo" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+  body.innerHTML=preview?'<video src="feature.mp4" controls autoplay playsinline></video>':'<iframe src="https://www.youtube-nocookie.com/embed/'+ID+'?autoplay=1&rel=0&modestbranding=1" title="Blinksmart demo" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
   m.classList.add('open');document.documentElement.classList.add('vm-lock');m.querySelector('.vm-x').focus();
   var hv=document.getElementById('heroVid');if(hv)hv.pause()}
  function close(){m.classList.remove('open');document.documentElement.classList.remove('vm-lock');body.innerHTML='';var hv=document.getElementById('heroVid');if(hv)hv.play().catch(function(){});if(last)last.focus()}
