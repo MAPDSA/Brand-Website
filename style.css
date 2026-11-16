@@ -620,3 +620,22 @@ html.splashing{overflow:hidden}
 .row:has(>.card .big){display:grid!important;grid-template-columns:1fr 1fr;gap:12px}
 .row:has(>.card .big)>.card{padding:16px;min-width:0}
 .row:has(>.card .big) .big{font-size:clamp(26px,8vw,34px);overflow-wrap:anywhere}}
+/* communication pillars */
+.pgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.pcard{display:flex;flex-direction:column;gap:12px;min-width:0}
+.pcard .ptop{display:flex;align-items:center;gap:12px}
+.pcard .pnum{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.pcard.b .pnum{color:#BFD0FF}
+.pcard h3{font-size:clamp(19px,1.6vw,22px);line-height:1.25;text-wrap:balance}
+.pcard>p{flex:1}
+.pchip{align-self:flex-start;margin-top:auto;font-family:var(--mono);font-size:12px;padding:6px 10px;border-radius:999px;background:var(--tint2,#EAF0FF);color:var(--blue);border:1px solid #D6E0FF}
+.pcard.b .pchip{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.28)}
+.pstats{display:grid;gap:10px;margin:4px 0 8px;flex:1}
+.pstats div{display:flex;align-items:baseline;gap:10px;border-top:1px solid rgba(255,255,255,.22);padding-top:10px}
+.pstats dt{font-size:clamp(26px,2.4vw,32px);font-weight:700;letter-spacing:-.03em;color:#fff;min-width:4.4em}
+.pstats dd{margin:0;color:#DCE6FF;font-size:14px}
+@media(max-width:980px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.pgrid{grid-template-columns:1fr;gap:12px}}
+.pcard{padding:clamp(22px,2.2vw,30px)!important;border-radius:22px}
+.pcard>p:empty{display:none}
+.pstats{gap:0;margin:0}.pstats div{padding-block:10px}.pstats dt{font-size:clamp(24px,2.2vw,30px);min-width:4.6em}
