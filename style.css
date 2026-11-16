@@ -607,3 +607,16 @@ html.splashing{overflow:hidden}
 .hwfig img[src*="device-"]{background:#fff}
 .hwfig img[src*="bs-"]{background:#F1F4FE;border-radius:24px}
 .hw-main img[src*="bs-front"]{max-width:620px;margin-inline:auto;display:block}
+/* hero-stack polish */
+.hero.hero-stack{padding-top:clamp(24px,3.5vw,48px)}
+.hero-stack .wrap{gap:clamp(24px,3.5vw,40px)}
+.hero-stack .pic.hero-film{max-width:min(1040px,calc((100svh - 230px)*1.7778));margin-inline:auto}
+.hero-stack .txt{gap:16px}
+.hero-stack .chip{max-width:100%;text-align:center;line-height:1.35}
+@media(max-width:720px){.hero-stack .pic.hero-film{max-width:100%}.hero-film video{border-radius:16px}.hero-stack .chip{font-size:12px;padding:6px 12px}.hero-film .snd,.hero-film .snd:hover{width:36px!important;height:36px!important;right:10px!important;bottom:10px!important;background-size:16px!important}}
+.hero.hero-stack:not(:has(+ .statwrap)){padding-bottom:clamp(40px,5vw,72px)}
+.hwrow{max-width:1040px;margin-inline:auto}
+@media(max-width:600px){section{padding-block:64px}.statwrap{padding-block:0}
+.row:has(>.card .big){display:grid!important;grid-template-columns:1fr 1fr;gap:12px}
+.row:has(>.card .big)>.card{padding:16px;min-width:0}
+.row:has(>.card .big) .big{font-size:clamp(26px,8vw,34px);overflow-wrap:anywhere}}
