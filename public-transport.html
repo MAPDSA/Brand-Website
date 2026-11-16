@@ -28,12 +28,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
-<script>try{if(sessionStorage.getItem('sa-splash'))document.documentElement.classList.add('nosplash')}catch(e){}</script>
+
 </head>
 <body>
 <div id="splash" aria-hidden="true"><video src="logo-anim.mp4" poster="logo-poster.jpg" muted playsinline preload="auto"></video><span class="skip">Tap to skip</span></div>
-<script>(function(){var s=document.getElementById('splash');if(!s)return;var d=document.documentElement;if(d.classList.contains('nosplash')){s.remove();return}
-try{sessionStorage.setItem('sa-splash','1')}catch(e){}d.classList.add('splashing');var v=s.querySelector('video'),done=false;
+<script>(function(){var s=document.getElementById('splash');if(!s)return;var d=document.documentElement;try{var nv=performance.getEntriesByType('navigation')[0],ty=nv?nv.type:'navigate',r=document.referrer;if(ty!=='reload'&&r&&new URL(r).origin===location.origin){s.remove();return}}catch(e){}d.classList.add('splashing');var v=s.querySelector('video'),done=false;
 function end(){if(done)return;done=true;s.classList.add('out');d.classList.remove('splashing');setTimeout(function(){s.remove()},600)}
 if(matchMedia('(prefers-reduced-motion: reduce)').matches){setTimeout(end,900);return}
 v.playbackRate=1.5;var p=v.play();if(p&&p.catch)p.catch(function(){setTimeout(end,1200)});
